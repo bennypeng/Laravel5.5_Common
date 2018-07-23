@@ -14,6 +14,10 @@
 - 集成了laravel-admin后台管理，使用/admin访问
 - 集成了日志管理后台，使用/logs访问
 - 翻译了验证控件validation
-
+- 集成了laravel-s来使用swoole
+    - 配置参考https://github.com/hhxsv5/laravel-s/blob/master/README-CN.md
+    - 使用php artisan laravels start 方法启动服务（默认使用8081作为监听端口）
+    - 加入/chat简易聊天室DEMO
+- 加入bootstrap、jQuery 本地库
 
 #### 并没有加入什么新奇玩意，仅用于工作方便使用

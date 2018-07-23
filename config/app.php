@@ -173,6 +173,7 @@ return [
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Hhxsv5\LaravelS\Illuminate\LaravelSServiceProvider::class,
 
         /*
          * Application Service Providers...

@@ -36,6 +36,10 @@ Route::prefix('user')->group(function() {
 
 });
 
+//  测试路由
+Route::get('test1', 'TestController@test1');
+Route::get('test2', 'TestController@test2');
+
 
 //  错误返回
 Route::fallback(function (){

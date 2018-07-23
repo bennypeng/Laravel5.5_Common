@@ -43,7 +43,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function login(Request $req) {
-
+return json_encode($req->all());
         $mobile    = $req->get('mobile');
         $password  = $req->get('password');
 

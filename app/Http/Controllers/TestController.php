@@ -14,12 +14,13 @@ class TestController extends Controller
     }
 
     public function test1() {
-        $this->helper->getNextFifteenTs();
+        return $this->helper->getNextFifteenTs();
     }
 
     //  绑定在单例上
     public function test2() {
         $helper = App::make('helper');
-        $helper->getNextFifteenTs();
+        return $helper->getNextFifteenTs();
     }
+
 }
