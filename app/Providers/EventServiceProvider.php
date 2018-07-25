@@ -26,6 +26,7 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         parent::boot();
+
         Event::listen('laravels.received_request', function (\Illuminate\Http\Request $req, $app) {
             $req->query->set('get_key', 'hhxsv5');    // 修改querystring
             $req->request->set('post_key', 'hhxsv5'); // 修改post body

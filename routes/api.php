@@ -39,6 +39,10 @@ Route::prefix('user')->group(function() {
 //  测试路由
 Route::get('test1', 'TestController@test1');
 Route::get('test2', 'TestController@test2');
+Route::get('test3', 'TestController@test3');
+Route::get('test4', 'TestController@test4');
+Route::get('test5', 'TestController@test5');
+Route::get('test6', 'TestController@test6');
 
 
 //  错误返回

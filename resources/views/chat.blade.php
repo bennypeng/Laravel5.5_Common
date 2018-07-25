@@ -68,9 +68,11 @@
 
     //  连接方法
     function link () {
-        this.ws = new WebSocket("ws://127.0.0.1:{{ config('laravels.listen_port') }}");
+        //this.ws = new WebSocket("ws://127.0.0.1:{{ config('laravels.listen_port') }}");
+        this.ws = new WebSocket("ws://127.0.0.1:{{ config('laravels.listen_port') }}/ws");
+
         this.ws.onopen = function(event){
-            console.log(event);
+            //console.log(event);
         };
 
         this.ws.onmessage = function (event) {
@@ -97,6 +99,10 @@
     //  发送消息
     function sendMsg() {
         var msg = $("#textbox").val();
+        if (msg.length === 0) {
+            alert('请输入些内容...');
+            return;
+        }
         this.ws.send(msg);
         $("#textbox").val('');
         $("#textbox").focus();
