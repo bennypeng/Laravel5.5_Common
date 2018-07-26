@@ -1,6 +1,6 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-#### 主要修改了一下内容
+#### 改动了那些地方？
 
 - 安装了常用的包，如debugbar、dbal、predis、log-viewer等
 - 加入bootstrap、jQuery 本地库
@@ -14,6 +14,30 @@
 - 提供helper自定义方法，在TestController中提供使用示例
 - 集成了laravel-admin后台管理，使用/admin访问
 - 集成了日志管理后台，使用/logs访问
+- 修复使用了swoole后 Laravel Log Viewer 中操作日志的BUG，需要手动修改以下文件
+    - /vendor/rap2hpoutre/laravel-log-viewer/src/controllers/LogViewerController.php
+    ```
+    public function index()
+    {
+        //  重置request
+        unset($this->request);
+        $this->request = app('request');
+        ......
+    }
+    ```
+    - /vendor/rap2hpoutre/laravel-log-viewer/src/Rap2hpoutre/LaravelLogViewer/LaravelLogViewer.php
+    ```
+    public static function all()
+    {
+        $log = array();
+        $pattern = '/\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}([\+-]\d{4})?\].*/';
+
+        if (self::$file && !file_exists(self::$file)) {
+            self::$file = null;
+        }
+        ......
+    }
+    ```
 - 翻译了验证控件validation
 - 集成了laravel-s来使用swoole
     - nginx的配置如下，也可参考（https://github.com/hhxsv5/laravel-s/blob/master/README-CN.md）
@@ -85,30 +109,18 @@
     - 使用php artisan laravels start 方法启动服务（默认使用8081作为监听端口）
     - 8081作为websocket端口，8082作为tcp端口，8086作为udp端口
     - 加入/chat简易聊天室DEMO
-- 修复使用了swoole后 Laravel Log Viewer 中操作日志的BUG，需要手动修改以下文件
-    - /vendor/rap2hpoutre/laravel-log-viewer/src/controllers/LogViewerController.php
-    ```
-    public function index()
-    {
-        //  重置request
-        unset($this->request);
-        $this->request = app('request');
-        ......
-    }
-    ```
-    - /vendor/rap2hpoutre/laravel-log-viewer/src/Rap2hpoutre/LaravelLogViewer/LaravelLogViewer.php
-    ```
-    public static function all()
-    {
-        $log = array();
-        $pattern = '/\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}([\+-]\d{4})?\].*/';
-
-        if (self::$file && !file_exists(self::$file)) {
-            self::$file = null;
-        }
-        ......
-    }
-    ```
-    
+#### 如何使用？
+```
+# 依次执行以下指令
+git clone https://github.com/bennypeng/Laravel5.5_Common.git Project1
+cd Project1
+composer install 
+cp .env.example .env # 并修改里面的配置项
+php artisan key:generate
+php artisan cache:clear
+php artisan migrate
+chmod -R 777 storage/
+php artisan laravels start
+```
 
 #### 并没有加入什么新奇玩意，仅用于工作方便使用
