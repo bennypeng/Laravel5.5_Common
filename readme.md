@@ -16,7 +16,7 @@
 - 集成了日志管理后台，使用/logs访问
 - 修复使用了swoole后 Laravel Log Viewer 中操作日志的BUG，需要手动修改以下文件
     - /vendor/rap2hpoutre/laravel-log-viewer/src/controllers/LogViewerController.php
-    ```
+    ```php
     public function index()
     {
         //  重置request
@@ -26,7 +26,7 @@
     }
     ```
     - /vendor/rap2hpoutre/laravel-log-viewer/src/Rap2hpoutre/LaravelLogViewer/LaravelLogViewer.php
-    ```
+    ```php
     public static function all()
     {
         $log = array();
@@ -41,7 +41,7 @@
 - 翻译了验证控件validation
 - 集成了laravel-s来使用swoole
     - nginx的配置如下，也可参考（https://github.com/hhxsv5/laravel-s/blob/master/README-CN.md）
-    ```
+    ```Nginx
     gzip on;
     gzip_min_length 1024;
     gzip_comp_level 2;
@@ -110,7 +110,7 @@
     - 8081作为websocket端口，8082作为tcp端口，8086作为udp端口
     - 加入/chat简易聊天室DEMO
 #### 如何使用？
-```
+```bash
 # 依次执行以下指令
 git clone https://github.com/bennypeng/Laravel5.5_Common.git Project1
 cd Project1
