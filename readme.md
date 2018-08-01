@@ -121,6 +121,7 @@ php artisan cache:clear
 php artisan migrate
 chmod -R 777 storage/
 php artisan laravels start
+
 ```
 
 #### 并没有加入什么新奇玩意，仅用于工作方便使用

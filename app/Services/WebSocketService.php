@@ -46,6 +46,7 @@ class WebSocketService implements WebSocketHandlerInterface
         $uid = app('swoole')->wsTable->get('fd:' . $frame->fd);
 
         //  获取table值并广播道客户端
+        Log::info('Receive:', [$frame->data]);
         foreach (app('swoole')->wsTable as $key => $row) {
             if (strpos($key, 'uid:') === 0) {
                 $server->push($row['value'], json_encode(["uid" => $uid['value'], "content" => $frame->data]));
