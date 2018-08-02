@@ -109,6 +109,7 @@
     - 使用php artisan laravels start 方法启动服务（默认使用8081作为监听端口）
     - 8081作为websocket端口，8082作为tcp端口，8086作为udp端口
     - 加入/chat简易聊天室DEMO
+    
 #### 如何使用？
 ```bash
 # 依次执行以下指令
@@ -123,5 +124,12 @@ chmod -R 777 storage/
 php artisan laravels start
 
 ```
+
+#### 存在哪些问题？
+- 虽然加入了ide_helper，但Redis仍然不能使用Redis::get()的方式自动提示，可以使用以下方式来实现自动提示：
+    - 加入了app/IdeHelpers/_ide_helper_redis.php, 及修改了composer.json自动加载该文件， 通过\Redis::get('test')可自动提示。
+    - echo Redis::connection()->get('test');
+    - echo app('redis')->get('test')
+    - $redis = Redis::resolve(); echo $redis->get('test');
 
 #### 并没有加入什么新奇玩意，仅用于工作方便使用

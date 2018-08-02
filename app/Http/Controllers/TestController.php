@@ -7,6 +7,7 @@ use App\Tasks\TestTask;
 use Hhxsv5\LaravelS\Swoole\Task\Event;
 use Hhxsv5\LaravelS\Swoole\Task\Task;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redis;
 
 class TestController extends Controller
 {
@@ -41,14 +42,28 @@ class TestController extends Controller
         return json_encode($ret);
     }
 
+    //  获取swoole状态
     public function test5() {
         $swoole = app('swoole');
         return json_encode($swoole->stats());
     }
 
+    //  数据库
     public function test6() {
-        $a = DB::select("select * from users where id=1");
+        $a = DB::select("SELECT * FROM USERS WHERE id=1");
         return response()->json($a);
+    }
+
+    //  Redis
+    public function test7()
+    {
+        echo \Redis::get('test');
+        //echo Redis::connection()->get('test');
+        //echo app('redis')->get('test');
+        //$redis = Redis::resolve();
+        //echo $redis->get('test');
+        //$data = Redis::get("test");
+        //return response()->json([$data]);
     }
 
 }

@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.5.40 on 2018-07-16 16:37:42.
+ * Generated for Laravel 5.5.40 on 2018-08-02 11:05:48.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -3363,7 +3363,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function connection($name = null)
         {
-            return \Illuminate\Database\DatabaseManager::connection($name);
+            //Method inherited from \Illuminate\Database\DatabaseManager            
+            return \Hhxsv5\LaravelS\Illuminate\Database\DatabaseManager::connection($name);
         }
         
         /**
@@ -3375,7 +3376,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function purge($name = null)
         {
-            \Illuminate\Database\DatabaseManager::purge($name);
+            //Method inherited from \Illuminate\Database\DatabaseManager            
+            \Hhxsv5\LaravelS\Illuminate\Database\DatabaseManager::purge($name);
         }
         
         /**
@@ -3387,7 +3389,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function disconnect($name = null)
         {
-            \Illuminate\Database\DatabaseManager::disconnect($name);
+            //Method inherited from \Illuminate\Database\DatabaseManager            
+            \Hhxsv5\LaravelS\Illuminate\Database\DatabaseManager::disconnect($name);
         }
         
         /**
@@ -3399,7 +3402,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function reconnect($name = null)
         {
-            return \Illuminate\Database\DatabaseManager::reconnect($name);
+            //Method inherited from \Illuminate\Database\DatabaseManager            
+            return \Hhxsv5\LaravelS\Illuminate\Database\DatabaseManager::reconnect($name);
         }
         
         /**
@@ -3410,7 +3414,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getDefaultConnection()
         {
-            return \Illuminate\Database\DatabaseManager::getDefaultConnection();
+            //Method inherited from \Illuminate\Database\DatabaseManager            
+            return \Hhxsv5\LaravelS\Illuminate\Database\DatabaseManager::getDefaultConnection();
         }
         
         /**
@@ -3422,7 +3427,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function setDefaultConnection($name)
         {
-            \Illuminate\Database\DatabaseManager::setDefaultConnection($name);
+            //Method inherited from \Illuminate\Database\DatabaseManager            
+            \Hhxsv5\LaravelS\Illuminate\Database\DatabaseManager::setDefaultConnection($name);
         }
         
         /**
@@ -3433,7 +3439,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function supportedDrivers()
         {
-            return \Illuminate\Database\DatabaseManager::supportedDrivers();
+            //Method inherited from \Illuminate\Database\DatabaseManager            
+            return \Hhxsv5\LaravelS\Illuminate\Database\DatabaseManager::supportedDrivers();
         }
         
         /**
@@ -3444,7 +3451,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function availableDrivers()
         {
-            return \Illuminate\Database\DatabaseManager::availableDrivers();
+            //Method inherited from \Illuminate\Database\DatabaseManager            
+            return \Hhxsv5\LaravelS\Illuminate\Database\DatabaseManager::availableDrivers();
         }
         
         /**
@@ -3457,7 +3465,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function extend($name, $resolver)
         {
-            \Illuminate\Database\DatabaseManager::extend($name, $resolver);
+            //Method inherited from \Illuminate\Database\DatabaseManager            
+            \Hhxsv5\LaravelS\Illuminate\Database\DatabaseManager::extend($name, $resolver);
         }
         
         /**
@@ -3468,7 +3477,18 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getConnections()
         {
-            return \Illuminate\Database\DatabaseManager::getConnections();
+            //Method inherited from \Illuminate\Database\DatabaseManager            
+            return \Hhxsv5\LaravelS\Illuminate\Database\DatabaseManager::getConnections();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getDriverName()
+        {
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getDriverName();
         }
         
         /**
@@ -3479,7 +3499,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getSchemaBuilder()
         {
-            return \Illuminate\Database\MySqlConnection::getSchemaBuilder();
+            //Method inherited from \Illuminate\Database\MySqlConnection            
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getSchemaBuilder();
         }
         
         /**
@@ -3492,7 +3513,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function bindValues($statement, $bindings)
         {
-            \Illuminate\Database\MySqlConnection::bindValues($statement, $bindings);
+            //Method inherited from \Illuminate\Database\MySqlConnection            
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::bindValues($statement, $bindings);
         }
         
         /**
@@ -3504,7 +3526,7 @@ namespace Illuminate\Support\Facades {
         public static function useDefaultQueryGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::useDefaultQueryGrammar();
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::useDefaultQueryGrammar();
         }
         
         /**
@@ -3516,7 +3538,7 @@ namespace Illuminate\Support\Facades {
         public static function useDefaultSchemaGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::useDefaultSchemaGrammar();
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::useDefaultSchemaGrammar();
         }
         
         /**
@@ -3528,7 +3550,7 @@ namespace Illuminate\Support\Facades {
         public static function useDefaultPostProcessor()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::useDefaultPostProcessor();
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::useDefaultPostProcessor();
         }
         
         /**
@@ -3541,7 +3563,7 @@ namespace Illuminate\Support\Facades {
         public static function table($table)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::table($table);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::table($table);
         }
         
         /**
@@ -3553,7 +3575,7 @@ namespace Illuminate\Support\Facades {
         public static function query()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::query();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::query();
         }
         
         /**
@@ -3568,7 +3590,7 @@ namespace Illuminate\Support\Facades {
         public static function selectOne($query, $bindings = array(), $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::selectOne($query, $bindings, $useReadPdo);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::selectOne($query, $bindings, $useReadPdo);
         }
         
         /**
@@ -3582,7 +3604,7 @@ namespace Illuminate\Support\Facades {
         public static function selectFromWriteConnection($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::selectFromWriteConnection($query, $bindings);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::selectFromWriteConnection($query, $bindings);
         }
         
         /**
@@ -3597,7 +3619,7 @@ namespace Illuminate\Support\Facades {
         public static function select($query, $bindings = array(), $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::select($query, $bindings, $useReadPdo);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::select($query, $bindings, $useReadPdo);
         }
         
         /**
@@ -3612,7 +3634,7 @@ namespace Illuminate\Support\Facades {
         public static function cursor($query, $bindings = array(), $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::cursor($query, $bindings, $useReadPdo);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::cursor($query, $bindings, $useReadPdo);
         }
         
         /**
@@ -3626,7 +3648,7 @@ namespace Illuminate\Support\Facades {
         public static function insert($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::insert($query, $bindings);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::insert($query, $bindings);
         }
         
         /**
@@ -3640,7 +3662,7 @@ namespace Illuminate\Support\Facades {
         public static function update($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::update($query, $bindings);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::update($query, $bindings);
         }
         
         /**
@@ -3654,7 +3676,7 @@ namespace Illuminate\Support\Facades {
         public static function delete($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::delete($query, $bindings);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::delete($query, $bindings);
         }
         
         /**
@@ -3668,7 +3690,7 @@ namespace Illuminate\Support\Facades {
         public static function statement($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::statement($query, $bindings);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::statement($query, $bindings);
         }
         
         /**
@@ -3682,7 +3704,7 @@ namespace Illuminate\Support\Facades {
         public static function affectingStatement($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::affectingStatement($query, $bindings);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::affectingStatement($query, $bindings);
         }
         
         /**
@@ -3695,7 +3717,7 @@ namespace Illuminate\Support\Facades {
         public static function unprepared($query)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::unprepared($query);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::unprepared($query);
         }
         
         /**
@@ -3708,7 +3730,7 @@ namespace Illuminate\Support\Facades {
         public static function pretend($callback)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::pretend($callback);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::pretend($callback);
         }
         
         /**
@@ -3721,7 +3743,7 @@ namespace Illuminate\Support\Facades {
         public static function prepareBindings($bindings)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::prepareBindings($bindings);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::prepareBindings($bindings);
         }
         
         /**
@@ -3736,7 +3758,7 @@ namespace Illuminate\Support\Facades {
         public static function logQuery($query, $bindings, $time = null)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::logQuery($query, $bindings, $time);
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::logQuery($query, $bindings, $time);
         }
         
         /**
@@ -3749,7 +3771,7 @@ namespace Illuminate\Support\Facades {
         public static function listen($callback)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::listen($callback);
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::listen($callback);
         }
         
         /**
@@ -3762,7 +3784,7 @@ namespace Illuminate\Support\Facades {
         public static function raw($value)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::raw($value);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::raw($value);
         }
         
         /**
@@ -3775,7 +3797,7 @@ namespace Illuminate\Support\Facades {
         public static function recordsHaveBeenModified($value = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::recordsHaveBeenModified($value);
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::recordsHaveBeenModified($value);
         }
         
         /**
@@ -3787,7 +3809,7 @@ namespace Illuminate\Support\Facades {
         public static function isDoctrineAvailable()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::isDoctrineAvailable();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::isDoctrineAvailable();
         }
         
         /**
@@ -3801,7 +3823,7 @@ namespace Illuminate\Support\Facades {
         public static function getDoctrineColumn($table, $column)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDoctrineColumn($table, $column);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getDoctrineColumn($table, $column);
         }
         
         /**
@@ -3813,7 +3835,7 @@ namespace Illuminate\Support\Facades {
         public static function getDoctrineSchemaManager()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDoctrineSchemaManager();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getDoctrineSchemaManager();
         }
         
         /**
@@ -3825,7 +3847,7 @@ namespace Illuminate\Support\Facades {
         public static function getDoctrineConnection()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDoctrineConnection();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getDoctrineConnection();
         }
         
         /**
@@ -3837,7 +3859,7 @@ namespace Illuminate\Support\Facades {
         public static function getPdo()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getPdo();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getPdo();
         }
         
         /**
@@ -3849,7 +3871,7 @@ namespace Illuminate\Support\Facades {
         public static function getReadPdo()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getReadPdo();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getReadPdo();
         }
         
         /**
@@ -3862,7 +3884,7 @@ namespace Illuminate\Support\Facades {
         public static function setPdo($pdo)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::setPdo($pdo);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::setPdo($pdo);
         }
         
         /**
@@ -3875,7 +3897,7 @@ namespace Illuminate\Support\Facades {
         public static function setReadPdo($pdo)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::setReadPdo($pdo);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::setReadPdo($pdo);
         }
         
         /**
@@ -3888,7 +3910,7 @@ namespace Illuminate\Support\Facades {
         public static function setReconnector($reconnector)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::setReconnector($reconnector);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::setReconnector($reconnector);
         }
         
         /**
@@ -3900,7 +3922,7 @@ namespace Illuminate\Support\Facades {
         public static function getName()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getName();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getName();
         }
         
         /**
@@ -3913,19 +3935,7 @@ namespace Illuminate\Support\Facades {
         public static function getConfig($option = null)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getConfig($option);
-        }
-        
-        /**
-         * Get the PDO driver name.
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function getDriverName()
-        {
-            //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDriverName();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getConfig($option);
         }
         
         /**
@@ -3937,7 +3947,7 @@ namespace Illuminate\Support\Facades {
         public static function getQueryGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getQueryGrammar();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getQueryGrammar();
         }
         
         /**
@@ -3950,7 +3960,7 @@ namespace Illuminate\Support\Facades {
         public static function setQueryGrammar($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setQueryGrammar($grammar);
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::setQueryGrammar($grammar);
         }
         
         /**
@@ -3962,7 +3972,7 @@ namespace Illuminate\Support\Facades {
         public static function getSchemaGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getSchemaGrammar();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getSchemaGrammar();
         }
         
         /**
@@ -3975,7 +3985,7 @@ namespace Illuminate\Support\Facades {
         public static function setSchemaGrammar($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setSchemaGrammar($grammar);
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::setSchemaGrammar($grammar);
         }
         
         /**
@@ -3987,7 +3997,7 @@ namespace Illuminate\Support\Facades {
         public static function getPostProcessor()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getPostProcessor();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getPostProcessor();
         }
         
         /**
@@ -4000,7 +4010,7 @@ namespace Illuminate\Support\Facades {
         public static function setPostProcessor($processor)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setPostProcessor($processor);
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::setPostProcessor($processor);
         }
         
         /**
@@ -4012,7 +4022,7 @@ namespace Illuminate\Support\Facades {
         public static function getEventDispatcher()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getEventDispatcher();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getEventDispatcher();
         }
         
         /**
@@ -4025,7 +4035,7 @@ namespace Illuminate\Support\Facades {
         public static function setEventDispatcher($events)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setEventDispatcher($events);
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::setEventDispatcher($events);
         }
         
         /**
@@ -4037,7 +4047,7 @@ namespace Illuminate\Support\Facades {
         public static function pretending()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::pretending();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::pretending();
         }
         
         /**
@@ -4049,7 +4059,7 @@ namespace Illuminate\Support\Facades {
         public static function getQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getQueryLog();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getQueryLog();
         }
         
         /**
@@ -4061,7 +4071,7 @@ namespace Illuminate\Support\Facades {
         public static function flushQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::flushQueryLog();
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::flushQueryLog();
         }
         
         /**
@@ -4073,7 +4083,7 @@ namespace Illuminate\Support\Facades {
         public static function enableQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::enableQueryLog();
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::enableQueryLog();
         }
         
         /**
@@ -4085,7 +4095,7 @@ namespace Illuminate\Support\Facades {
         public static function disableQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::disableQueryLog();
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::disableQueryLog();
         }
         
         /**
@@ -4097,7 +4107,7 @@ namespace Illuminate\Support\Facades {
         public static function logging()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::logging();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::logging();
         }
         
         /**
@@ -4109,7 +4119,7 @@ namespace Illuminate\Support\Facades {
         public static function getDatabaseName()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDatabaseName();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getDatabaseName();
         }
         
         /**
@@ -4122,7 +4132,7 @@ namespace Illuminate\Support\Facades {
         public static function setDatabaseName($database)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::setDatabaseName($database);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::setDatabaseName($database);
         }
         
         /**
@@ -4134,7 +4144,7 @@ namespace Illuminate\Support\Facades {
         public static function getTablePrefix()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getTablePrefix();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getTablePrefix();
         }
         
         /**
@@ -4147,7 +4157,7 @@ namespace Illuminate\Support\Facades {
         public static function setTablePrefix($prefix)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setTablePrefix($prefix);
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::setTablePrefix($prefix);
         }
         
         /**
@@ -4160,7 +4170,7 @@ namespace Illuminate\Support\Facades {
         public static function withTablePrefix($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::withTablePrefix($grammar);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::withTablePrefix($grammar);
         }
         
         /**
@@ -4174,7 +4184,7 @@ namespace Illuminate\Support\Facades {
         public static function resolverFor($driver, $callback)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::resolverFor($driver, $callback);
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::resolverFor($driver, $callback);
         }
         
         /**
@@ -4187,7 +4197,7 @@ namespace Illuminate\Support\Facades {
         public static function getResolver($driver)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getResolver($driver);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::getResolver($driver);
         }
         
         /**
@@ -4202,7 +4212,7 @@ namespace Illuminate\Support\Facades {
         public static function transaction($callback, $attempts = 1)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::transaction($callback, $attempts);
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::transaction($callback, $attempts);
         }
         
         /**
@@ -4215,7 +4225,7 @@ namespace Illuminate\Support\Facades {
         public static function beginTransaction()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::beginTransaction();
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::beginTransaction();
         }
         
         /**
@@ -4227,7 +4237,7 @@ namespace Illuminate\Support\Facades {
         public static function commit()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::commit();
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::commit();
         }
         
         /**
@@ -4240,7 +4250,7 @@ namespace Illuminate\Support\Facades {
         public static function rollBack($toLevel = null)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::rollBack($toLevel);
+            \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::rollBack($toLevel);
         }
         
         /**
@@ -4252,7 +4262,7 @@ namespace Illuminate\Support\Facades {
         public static function transactionLevel()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::transactionLevel();
+            return \Hhxsv5\LaravelS\Illuminate\Database\SwooleMySQLConnection::transactionLevel();
         }
          
     }
@@ -13001,554 +13011,6 @@ namespace Jenssegers\Agent\Facades {
  
 }
 
-namespace Barryvdh\Debugbar { 
-
-    class Facade {
-        
-        /**
-         * Enable the Debugbar and boot, if not already booted.
-         *
-         * @static 
-         */ 
-        public static function enable()
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::enable();
-        }
-        
-        /**
-         * Boot the debugbar (add collectors, renderer and listener)
-         *
-         * @static 
-         */ 
-        public static function boot()
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::boot();
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function shouldCollect($name, $default = false)
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::shouldCollect($name, $default);
-        }
-        
-        /**
-         * Adds a data collector
-         *
-         * @param \Barryvdh\Debugbar\DataCollectorInterface $collector
-         * @throws DebugBarException
-         * @return $this 
-         * @static 
-         */ 
-        public static function addCollector($collector)
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::addCollector($collector);
-        }
-        
-        /**
-         * Handle silenced errors
-         *
-         * @param $level
-         * @param $message
-         * @param string $file
-         * @param int $line
-         * @param array $context
-         * @throws \ErrorException
-         * @static 
-         */ 
-        public static function handleError($level, $message, $file = '', $line = 0, $context = array())
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::handleError($level, $message, $file, $line, $context);
-        }
-        
-        /**
-         * Starts a measure
-         *
-         * @param string $name Internal name, used to stop the measure
-         * @param string $label Public name
-         * @static 
-         */ 
-        public static function startMeasure($name, $label = null)
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::startMeasure($name, $label);
-        }
-        
-        /**
-         * Stops a measure
-         *
-         * @param string $name
-         * @static 
-         */ 
-        public static function stopMeasure($name)
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::stopMeasure($name);
-        }
-        
-        /**
-         * Adds an exception to be profiled in the debug bar
-         *
-         * @param \Exception $e
-         * @deprecated in favor of addThrowable
-         * @static 
-         */ 
-        public static function addException($e)
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::addException($e);
-        }
-        
-        /**
-         * Adds an exception to be profiled in the debug bar
-         *
-         * @param \Exception $e
-         * @static 
-         */ 
-        public static function addThrowable($e)
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::addThrowable($e);
-        }
-        
-        /**
-         * Returns a JavascriptRenderer for this instance
-         *
-         * @param string $baseUrl
-         * @param string $basePathng
-         * @return \Barryvdh\Debugbar\JavascriptRenderer 
-         * @static 
-         */ 
-        public static function getJavascriptRenderer($baseUrl = null, $basePath = null)
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::getJavascriptRenderer($baseUrl, $basePath);
-        }
-        
-        /**
-         * Modify the response and inject the debugbar (or data in headers)
-         *
-         * @param \Symfony\Component\HttpFoundation\Request $request
-         * @param \Symfony\Component\HttpFoundation\Response $response
-         * @return \Symfony\Component\HttpFoundation\Response 
-         * @static 
-         */ 
-        public static function modifyResponse($request, $response)
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::modifyResponse($request, $response);
-        }
-        
-        /**
-         * Check if the Debugbar is enabled
-         *
-         * @return boolean 
-         * @static 
-         */ 
-        public static function isEnabled()
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::isEnabled();
-        }
-        
-        /**
-         * Collects the data from the collectors
-         *
-         * @return array 
-         * @static 
-         */ 
-        public static function collect()
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::collect();
-        }
-        
-        /**
-         * Injects the web debug toolbar into the given Response.
-         *
-         * @param \Symfony\Component\HttpFoundation\Response $response A Response instance
-         * Based on https://github.com/symfony/WebProfilerBundle/blob/master/EventListener/WebDebugToolbarListener.php
-         * @static 
-         */ 
-        public static function injectDebugbar($response)
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::injectDebugbar($response);
-        }
-        
-        /**
-         * Disable the Debugbar
-         *
-         * @static 
-         */ 
-        public static function disable()
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::disable();
-        }
-        
-        /**
-         * Adds a measure
-         *
-         * @param string $label
-         * @param float $start
-         * @param float $end
-         * @static 
-         */ 
-        public static function addMeasure($label, $start, $end)
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::addMeasure($label, $start, $end);
-        }
-        
-        /**
-         * Utility function to measure the execution of a Closure
-         *
-         * @param string $label
-         * @param \Closure $closure
-         * @static 
-         */ 
-        public static function measure($label, $closure)
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::measure($label, $closure);
-        }
-        
-        /**
-         * Collect data in a CLI request
-         *
-         * @return array 
-         * @static 
-         */ 
-        public static function collectConsole()
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::collectConsole();
-        }
-        
-        /**
-         * Adds a message to the MessagesCollector
-         * 
-         * A message can be anything from an object to a string
-         *
-         * @param mixed $message
-         * @param string $label
-         * @static 
-         */ 
-        public static function addMessage($message, $label = 'info')
-        {
-            return \Barryvdh\Debugbar\LaravelDebugbar::addMessage($message, $label);
-        }
-        
-        /**
-         * Checks if a data collector has been added
-         *
-         * @param string $name
-         * @return boolean 
-         * @static 
-         */ 
-        public static function hasCollector($name)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::hasCollector($name);
-        }
-        
-        /**
-         * Returns a data collector
-         *
-         * @param string $name
-         * @return \DebugBar\DataCollectorInterface 
-         * @throws DebugBarException
-         * @static 
-         */ 
-        public static function getCollector($name)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::getCollector($name);
-        }
-        
-        /**
-         * Returns an array of all data collectors
-         *
-         * @return \DebugBar\array[DataCollectorInterface] 
-         * @static 
-         */ 
-        public static function getCollectors()
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::getCollectors();
-        }
-        
-        /**
-         * Sets the request id generator
-         *
-         * @param \DebugBar\RequestIdGeneratorInterface $generator
-         * @return $this 
-         * @static 
-         */ 
-        public static function setRequestIdGenerator($generator)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::setRequestIdGenerator($generator);
-        }
-        
-        /**
-         * 
-         *
-         * @return \DebugBar\RequestIdGeneratorInterface 
-         * @static 
-         */ 
-        public static function getRequestIdGenerator()
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::getRequestIdGenerator();
-        }
-        
-        /**
-         * Returns the id of the current request
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function getCurrentRequestId()
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::getCurrentRequestId();
-        }
-        
-        /**
-         * Sets the storage backend to use to store the collected data
-         *
-         * @param \DebugBar\StorageInterface $storage
-         * @return $this 
-         * @static 
-         */ 
-        public static function setStorage($storage = null)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::setStorage($storage);
-        }
-        
-        /**
-         * 
-         *
-         * @return \DebugBar\StorageInterface 
-         * @static 
-         */ 
-        public static function getStorage()
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::getStorage();
-        }
-        
-        /**
-         * Checks if the data will be persisted
-         *
-         * @return boolean 
-         * @static 
-         */ 
-        public static function isDataPersisted()
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::isDataPersisted();
-        }
-        
-        /**
-         * Sets the HTTP driver
-         *
-         * @param \DebugBar\HttpDriverInterface $driver
-         * @return $this 
-         * @static 
-         */ 
-        public static function setHttpDriver($driver)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::setHttpDriver($driver);
-        }
-        
-        /**
-         * Returns the HTTP driver
-         * 
-         * If no http driver where defined, a PhpHttpDriver is automatically created
-         *
-         * @return \DebugBar\HttpDriverInterface 
-         * @static 
-         */ 
-        public static function getHttpDriver()
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::getHttpDriver();
-        }
-        
-        /**
-         * Returns collected data
-         * 
-         * Will collect the data if none have been collected yet
-         *
-         * @return array 
-         * @static 
-         */ 
-        public static function getData()
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::getData();
-        }
-        
-        /**
-         * Returns an array of HTTP headers containing the data
-         *
-         * @param string $headerName
-         * @param integer $maxHeaderLength
-         * @return array 
-         * @static 
-         */ 
-        public static function getDataAsHeaders($headerName = 'phpdebugbar', $maxHeaderLength = 4096, $maxTotalHeaderLength = 250000)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::getDataAsHeaders($headerName, $maxHeaderLength, $maxTotalHeaderLength);
-        }
-        
-        /**
-         * Sends the data through the HTTP headers
-         *
-         * @param bool $useOpenHandler
-         * @param string $headerName
-         * @param integer $maxHeaderLength
-         * @return $this 
-         * @static 
-         */ 
-        public static function sendDataInHeaders($useOpenHandler = null, $headerName = 'phpdebugbar', $maxHeaderLength = 4096)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::sendDataInHeaders($useOpenHandler, $headerName, $maxHeaderLength);
-        }
-        
-        /**
-         * Stacks the data in the session for later rendering
-         *
-         * @static 
-         */ 
-        public static function stackData()
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::stackData();
-        }
-        
-        /**
-         * Checks if there is stacked data in the session
-         *
-         * @return boolean 
-         * @static 
-         */ 
-        public static function hasStackedData()
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::hasStackedData();
-        }
-        
-        /**
-         * Returns the data stacked in the session
-         *
-         * @param boolean $delete Whether to delete the data in the session
-         * @return array 
-         * @static 
-         */ 
-        public static function getStackedData($delete = true)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::getStackedData($delete);
-        }
-        
-        /**
-         * Sets the key to use in the $_SESSION array
-         *
-         * @param string $ns
-         * @return $this 
-         * @static 
-         */ 
-        public static function setStackDataSessionNamespace($ns)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::setStackDataSessionNamespace($ns);
-        }
-        
-        /**
-         * Returns the key used in the $_SESSION array
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function getStackDataSessionNamespace()
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::getStackDataSessionNamespace();
-        }
-        
-        /**
-         * Sets whether to only use the session to store stacked data even
-         * if a storage is enabled
-         *
-         * @param boolean $enabled
-         * @return $this 
-         * @static 
-         */ 
-        public static function setStackAlwaysUseSessionStorage($enabled = true)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::setStackAlwaysUseSessionStorage($enabled);
-        }
-        
-        /**
-         * Checks if the session is always used to store stacked data
-         * even if a storage is enabled
-         *
-         * @return boolean 
-         * @static 
-         */ 
-        public static function isStackAlwaysUseSessionStorage()
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::isStackAlwaysUseSessionStorage();
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function offsetSet($key, $value)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::offsetSet($key, $value);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function offsetGet($key)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::offsetGet($key);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function offsetExists($key)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::offsetExists($key);
-        }
-        
-        /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function offsetUnset($key)
-        {
-            //Method inherited from \DebugBar\DebugBar            
-            return \Barryvdh\Debugbar\LaravelDebugbar::offsetUnset($key);
-        }
-         
-    }
- 
-}
-
 namespace Appstract\LushHttp { 
 
     class LushFacade {
@@ -16468,8 +15930,6 @@ namespace  {
     class QrCode extends \SimpleSoftwareIO\QrCode\Facades\QrCode {}
 
     class Agent extends \Jenssegers\Agent\Facades\Agent {}
-
-    class Debugbar extends \Barryvdh\Debugbar\Facade {}
 
     class Lush extends \Appstract\LushHttp\LushFacade {}
 
