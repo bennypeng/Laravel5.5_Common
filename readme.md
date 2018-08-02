@@ -2,7 +2,7 @@
 
 #### 改动了那些地方？
 
-- 安装了常用的包，如debugbar、dbal、predis、log-viewer等
+- 安装了常用的包，如dbal、predis、log-viewer等
 - 加入bootstrap、jQuery 本地库
 - 修改了时区、本地语言、日志记录方式（按天）、session驱动使用redis
 - 使用jwt进行用户授权验证
