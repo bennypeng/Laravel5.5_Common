@@ -128,6 +128,8 @@
     make && make install
 
     # 修改配置文件
+    cd config/nutcracker
+    cp nutcracker.example.yml nutcracker.yml 
     # .env 中的 REDIS_PORT 需要和 nutcracker.yml 的一致
     # config/database.php 中redis配置里的database选项需要注释掉
     # 修改配置文件 config/nutcracker/nutcracker.yml
