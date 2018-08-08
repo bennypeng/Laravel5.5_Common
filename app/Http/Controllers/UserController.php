@@ -12,7 +12,8 @@ class UserController extends Controller
 {
     protected $userModel;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->userModel = new User;
     }
 
@@ -21,7 +22,8 @@ class UserController extends Controller
      * @param Request $req
      * @return \Illuminate\Http\JsonResponse
      */
-    public function regist(Request $req) {
+    public function regist(Request $req)
+    {
 
         $mobile     = $req->get('mobile');
         $password   = $req->get('password');
@@ -42,7 +44,8 @@ class UserController extends Controller
      * @param Request $req
      * @return \Illuminate\Http\JsonResponse
      */
-    public function login(Request $req) {
+    public function login(Request $req)
+    {
 
         $mobile    = $req->get('mobile');
         $password  = $req->get('password');
@@ -64,7 +67,8 @@ class UserController extends Controller
      * @param Request $req
      * @return \Illuminate\Http\JsonResponse
      */
-    public function logout(Request $req) {
+    public function logout(Request $req)
+    {
         Auth::guard('api')->logout();
         return response()->json(Config::get('constants.LOGIN_OUT'));
     }

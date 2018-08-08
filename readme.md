@@ -109,6 +109,30 @@
     - 使用php artisan laravels start 方法启动服务（默认使用8081作为监听端口）
     - 8081作为websocket端口，8082作为tcp端口，8086作为udp端口
     - 加入/chat简易聊天室DEMO
+- 集成了TwemProxy(nutcracker)代理服务器，能有效减少大量连接对redis服务器的性能影响
+    - 安装步骤
+    ```bash
+    # 安装m4、autoconf、automake、libtool、gcc
+    wget http://mirrors.kernel.org/gnu/m4/m4-1.4.13.tar.gz
+    && tar -xzvf m4-1.4.13.tar.gz
+    && cd m4-1.4.13
+    && ./configure --prefix=/usr/local 
+    make && make install
+    yum -y  install autoconf automake  libtool gcc 
+
+    # 安装twemproxy
+    git clone https://github.com/twitter/twemproxy.git
+    cd twemproxy/
+    autoreconf -fvi
+    sudo ./configure --enable-debug=full
+    make && make install
+
+    # 修改配置文件
+    # .env 中的 REDIS_PORT 需要和 nutcracker.yml 的一致
+    # config/database.php 中redis配置里的database选项需要注释掉
+    # 修改配置文件 config/nutcracker/nutcracker.yml
+    # 参考官方：https://github.com/twitter/twemproxy
+    ```
     
 #### 如何使用？
 ```bash
@@ -121,8 +145,8 @@ php artisan key:generate
 php artisan cache:clear
 php artisan migrate
 chmod -R 777 storage/
-php artisan laravels start
-
+php artisan laravels start   # 开启laravels（swoole轮子）
+php artisan nutcracker start # 开启nutcracker（redis集群）
 ```
 
 #### 存在哪些问题？

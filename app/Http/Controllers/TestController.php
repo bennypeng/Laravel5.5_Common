@@ -19,37 +19,43 @@ class TestController extends Controller
         $this->helper = $helper;
     }
 
-    public function test1() {
+    public function test1()
+    {
         return $this->helper->getNextFifteenTs();
     }
 
     //  绑定在单例上
-    public function test2() {
+    public function test2()
+    {
         $helper = App::make('helper');
         return $helper->getNextFifteenTs();
     }
 
     //  异步处理事件
-    public function test3() {
+    public function test3()
+    {
         $success = Event::fire(new TestEvent('event test data'));
         return $success ? "ok" : "fail";
     }
 
     //  投放任务
-    public function test4() {
+    public function test4()
+    {
         $task = new TestTask("task 1 data");
         $ret = Task::deliver($task);
         return json_encode($ret);
     }
 
     //  获取swoole状态
-    public function test5() {
+    public function test5()
+    {
         $swoole = app('swoole');
         return json_encode($swoole->stats());
     }
 
     //  数据库
-    public function test6() {
+    public function test6()
+    {
         $a = DB::select("SELECT * FROM USERS WHERE id=1");
         return response()->json($a);
     }
@@ -57,13 +63,8 @@ class TestController extends Controller
     //  Redis
     public function test7()
     {
-        echo \Redis::get('test');
-        //echo Redis::connection()->get('test');
-        //echo app('redis')->get('test');
-        //$redis = Redis::resolve();
-        //echo $redis->get('test');
-        //$data = Redis::get("test");
-        //return response()->json([$data]);
+        //\Redis::set('aaaaa' . rand(1, 10), '11111');
+        return response(\Redis::get('aaaaa' . rand(1, 10)));
     }
 
 }
