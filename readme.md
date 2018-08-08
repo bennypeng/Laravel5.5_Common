@@ -128,8 +128,6 @@
     make && make install
 
     # 修改配置文件
-    cd config/nutcracker
-    cp nutcracker.example.yml nutcracker.yml 
     # .env 中的 REDIS_PORT 需要和 nutcracker.yml 的一致
     # config/database.php 中redis配置里的database选项需要注释掉
     # 修改配置文件 config/nutcracker/nutcracker.yml
@@ -143,6 +141,7 @@ git clone https://github.com/bennypeng/Laravel5.5_Common.git Project1
 cd Project1
 composer install 
 cp .env.example .env # 并修改里面的配置项
+cp config/nutcracker/nutcracker.example.yml config/nutcracker/nutcracker.yml 
 php artisan key:generate
 php artisan cache:clear
 php artisan migrate
