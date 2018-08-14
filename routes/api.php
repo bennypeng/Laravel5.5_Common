@@ -44,6 +44,7 @@ Route::get('test4', 'TestController@test4');
 Route::get('test5', 'TestController@test5');
 Route::get('test6', 'TestController@test6');
 Route::get('test7', 'TestController@test7');
+Route::get('test8', 'TestController@test8');
 
 
 //  错误返回

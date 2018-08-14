@@ -11,5 +11,9 @@ let mix = require('laravel-mix');
  |
  */
 
+//mix.js('resources/assets/js/app.js', 'public/js')
+//   .sass('resources/assets/sass/app.scss', 'public/css');
+
 mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+    .sass('resources/assets/sass/app.scss', 'public/css')
+    .extract(['vue', 'axios']); //  不经常改动的代码，避免重新编译，会提取到 public/js/vendor.js

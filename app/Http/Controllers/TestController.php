@@ -56,7 +56,7 @@ class TestController extends Controller
     //  数据库
     public function test6()
     {
-        $a = DB::select("SELECT * FROM USERS WHERE id=1");
+        $a = DB::select("SELECT * FROM users WHERE id=1");
         return response()->json($a);
     }
 
@@ -65,6 +65,26 @@ class TestController extends Controller
     {
         //\Redis::set('aaaaa' . rand(1, 10), '11111');
         return response(\Redis::get('aaaaa' . rand(1, 10)));
+    }
+
+    //  返回数据给vue前端页面测试
+    public function test8()
+    {
+        return response()->json(
+            [
+                'result'   => [
+                    ['name' => 'benny', 'age' => 27, 'date' => '1991-06-01'],
+                    ['name' => 'peter', 'age' => 12, 'date' => '2006-01-25'],
+                    ['name' => 'marry', 'age' => 16, 'date' => '2002-12-01'],
+                    ['name' => 'jacket', 'age' => 80, 'date' => '1938-01-01'],
+                    ['name' => 'max', 'age' => 50, 'date' => '1968-06-01'],
+                    ['name' => 'john', 'age' => 40, 'date' => '1978-04-01'],
+                    ['name' => 'lessi', 'age' => 30, 'date' => '1988-05-01'],
+                ],
+                'message' => '操作成功',
+                'code' => 10000
+            ]
+        );
     }
 
 }

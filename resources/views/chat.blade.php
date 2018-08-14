@@ -35,22 +35,24 @@
         }
     </style>
 </head>
-<div class="container">
-    <p class="text-center"><h1>简易聊天室DEMO</h1></p>
-
+<body>
     <div class="container">
-        <div class="row" id="chatbox"></div>
-    </div>
-    <hr>
-    <form class="form" method="post" target="iframe">
-        <div class="form-group">
-            <input type="text" class="form-control" id="textbox" placeholder="请输入聊天内容...">
-        </div>
-        <button type="button" class="btn btn-default" onclick="sendMsg();" id="send_btn">发送</button>
-    </form>
-    <iframe id="frame" name="iframe" style="display:none;"></iframe>
-</div>
+        <p class="text-center"><h1>简易聊天室DEMO</h1></p>
 
+        <div class="container">
+            <div class="row" id="chatbox"></div>
+        </div>
+        <hr>
+        <form class="form" method="post" target="iframe">
+            <div class="form-group">
+                <input type="text" class="form-control" id="textbox" placeholder="请输入聊天内容...">
+            </div>
+            <button type="button" class="btn btn-default" onclick="sendMsg();" id="send_btn">发送</button>
+        </form>
+        <iframe id="frame" name="iframe" style="display:none;"></iframe>
+    </div>
+</body>
+</html>
 <script type="text/javascript">
     var ws;
 
@@ -109,5 +111,3 @@
     }
 
 </script>
-</body>
-</html>

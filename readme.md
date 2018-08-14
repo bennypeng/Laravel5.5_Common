@@ -98,9 +98,6 @@
             proxy_set_header Server-Addr $server_addr;
             proxy_set_header Server-Port $server_port;
             proxy_pass http://laravels;
-            add_header Access-Control-Allow-Origin *;
-            add_header Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept";
-            add_header Access-Control-Allow-Methods "GET, POST, OPTIONS";
         }
     
     }
@@ -133,6 +130,8 @@
     # 修改配置文件 config/nutcracker/nutcracker.yml
     # 参考官方：https://github.com/twitter/twemproxy
     ```
+- 添加了跨域中间件Cors来解决跨域问题
+- 添加了/web页面进行vue数据交互测试
     
 #### 如何使用？
 ```bash
@@ -148,6 +147,7 @@ php artisan migrate
 chmod -R 777 storage/
 php artisan laravels start   # 开启laravels（swoole轮子）
 php artisan nutcracker start # 开启nutcracker（redis集群）
+npm install
 ```
 
 #### 存在哪些问题？
