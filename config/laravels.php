@@ -54,14 +54,14 @@ return [
             //  毫秒级定时任务
             // 在Linux的Crontab中开启每分钟执行一次
             // * * * * * /usr/bin/php7.2 /home/vagrant/Code/Laravel5.5_Common/artisan schedule:run >> /dev/null 2>&1
-            \App\Jobs\TestCronJob::class
+            //\App\Jobs\TestCronJob::class
         ],
     ],
     'events'             => [
         //  绑定事件与监听器，一个事件可以有多个监听器，多个监听器按顺序执行
-        \App\Events\TestEvent::class => [
-            \App\Listeners\TestListener::class
-        ]
+        //\App\Events\TestEvent::class => [
+        //    \App\Listeners\TestListener::class
+        //]
     ],
     'swoole_tables'      => [
         // 场景：WebSocket中UserId与FD绑定
@@ -95,9 +95,9 @@ return [
         'buffer_output_size' => 16 * 1024 * 1024,
         'socket_buffer_size' => 128 * 1024 * 1024,
         'package_max_length' => 4 * 1024 * 1024,
-        'reload_async'       => true,
-        'max_wait_time'      => 60,
-        'enable_reuse_port'  => true,
+        'reload_async'       => true,  // 异步重启开关，设置为true时，将启用异步安全重启特性，Worker进程会等待异步事件完成后再退出
+        'max_wait_time'      => 60,    // 进程最大等待时间
+        'enable_reuse_port'  => true,  // 端口重用开关，设置为true时，多个进程可以同时进行Accept操作。
 
         /**
          * More settings of Swoole
